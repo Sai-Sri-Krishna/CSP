@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #1B4D2E;
+    --color-primary-dark: #123820;
+    --color-bg-light: #F6FAF5;
+    --color-card-bg: #FFFFFF;
+    --color-accent-badge: #E4F2E2;
+  }
+
+  body {
+    background-color: var(--color-bg-light);
+    color: #1C2B20;
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Custom Utilities for pixel-perfect matching */
+.agri-gradient-overlay {
+  background: linear-gradient(
+    90deg, 
+    #F6FAF5 0%, 
+    #F6FAF5 42%, 
+    rgba(246, 250, 245, 0.85) 55%, 
+    rgba(246, 250, 245, 0.25) 75%, 
+    rgba(246, 250, 245, 0) 100%
+  );
+}
+
+.agri-card-shadow {
+  box-shadow: 0 10px 30px -5px rgba(27, 77, 46, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.agri-stats-shadow {
+  box-shadow: 0 16px 40px -8px rgba(27, 77, 46, 0.08), 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.agri-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agri-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(27, 77, 46, 0.14), 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F7EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #A3C9A0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1B4D2E;
+}
